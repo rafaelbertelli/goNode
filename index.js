@@ -2,9 +2,21 @@ const express = require("express");
 
 const app = express();
 
-app.get("/", (req, res) => {
+const logMiddleware = (req, res, next) => {
+  console.log(
+    `HOST: ${req.headers.host} | URL: ${req.url} | METHOD: ${req.method}`
+  );
+
+  req.appName = "GoNode";
+
+  return next();
+};
+
+app.use(logMiddleware);
+
+app.get("/", logMiddleware, (req, res) => {
   // http://localhost:3000/?name=Rafael
-  return res.send(`Helloou, ${req.query.name}`);
+  return res.send(`Helloou, bem vindo ao ${req.appName}, ${req.query.name}`);
 });
 
 app.get("/login", (req, res) => {
