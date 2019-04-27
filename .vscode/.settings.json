@@ -1,0 +1,50 @@
+/**
+ * This settings will configure your VSCode properly
+ * Type `CTRL + SHIFT + P` then >Open Settings (JSON)
+ * Merge this json into yours, avoiding to overwrite
+ * your personal configurations
+ */
+
+{
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true
+  },
+
+  "window.zoomLevel": 0,
+
+  "explorer.confirmDragAndDrop": true,
+  "explorer.confirmDelete": false,
+
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.preferences.quoteStyle": "single",
+
+  "editor.rulers": [80, 120],
+  "editor.tabSize": 2,
+  "editor.fontSize": 12,
+  "editor.lineHeight": 17,
+
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": true,
+
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+
+  "editor.snippetSuggestions": "none",
+  "editor.renderLineHighlight": "gutter",
+
+  // it makes eslint correct your code when saving
+  "prettier.eslintIntegration": true,
+
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.syntaxProfiles": { "javascript": "jsx" },
+  "emmet.includeLanguages": { "javascript": "javascriptreact" },
+
+  "terminal.integrated.rendererType": "dom",
+
+  "workbench.iconTheme": "material-icon-theme",
+
+  "showGitMetrics": true,
+  "showMusicMetrics": true,
+  "showWeeklyRanking": true
+}
